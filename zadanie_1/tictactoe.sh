@@ -8,6 +8,7 @@ board=(" " " " " "
 	" " " " " ")
 is_playing=true
 current_player="X"
+against_computer=false
 
 
 
@@ -33,6 +34,7 @@ print_board(){
 
 print_info(){
 	echo "TIC TAC TOE"
+	[ "$against_computer" = true ] && echo "playing against: the computer" || echo "playing against: another player"
 	echo "current player: $current_player"
 	echo
 }
@@ -73,12 +75,14 @@ save_game(){
 	done
 	echo "${saved[@]}" > $SAVE_FILE
 	echo "$current_player" >> $SAVE_FILE
+	echo "$against_computer" >> $SAVE_FILE
 }
 
 load_game(){
 	if [ -f $SAVE_FILE ]; then
 		read -a board < $SAVE_FILE
-		current_player=$(tail -n 1 $SAVE_FILE)
+		current_player=$(tail -n 2 $SAVE_FILE | head -n 1)
+		against_computer=$(tail -n 1 $SAVE_FILE)
 
 		for i in {0..8}; do
 			[ "${board[$i]}" == "1" ] && board[$i]=" "
@@ -121,6 +125,21 @@ player_move(){
 	fi
 }
 
+# just a randomly selected move
+computer_move(){
+	empty_positions=()
+	for i in {0..8}; do
+		[ "${board[$i]}" == " " ] && empty_positions+=($i)
+	done
+
+	if [ ${#empty_positions[@]} -gt 0 ]; then
+		random_index=$(( RANDOM % ${#empty_positions[@]} ))
+		board[${empty_positions[$random_index]}]=$current_player
+	fi
+
+	switch_player
+}
+
 switch_player(){
 	[ "$current_player" == "X" ] && current_player="O" || current_player="X"
 }
@@ -130,6 +149,10 @@ switch_player(){
 # MAIN + GAME LOOP
 if ask_yes_no "load previous game?"; then
     load_game
+else
+    if ask_yes_no "play against the computer?"; then
+        against_computer=true
+    fi
 fi
 
 while $is_playing; do
@@ -139,8 +162,12 @@ while $is_playing; do
 	print_info
 	print_board
 
-	handle_input
-	
+	if $against_computer  && [ "$current_player" == "O" ]; then
+		computer_move
+	else
+		handle_input
+	fi
+
 	if check_winner "X"; then
 		clear
 		print_board
