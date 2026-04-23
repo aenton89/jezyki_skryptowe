@@ -2,6 +2,7 @@
 
 # set -x
 
+SAVE_FILE="save.txt"
 board=(" " " " " "
 	" " " " " "
 	" " " " " ")
@@ -12,7 +13,7 @@ current_player="X"
 
 ### UI RELATED
 print_guide(){
-	echo "q to quit, or r to reset the game"
+	echo "press s to save the game, l to load the game, q to quit, or r to reset the game"
 	echo "press the number of the position you want to place your mark:"
 	echo "1 | 2 | 3"
 	echo "--+---+--"
@@ -41,13 +42,50 @@ handle_input(){
 	read -n 1 -s input
 	
 	case $input in
+		s) save_game ;;
+		l) load_game ;;
 		q) is_playing=false ;;
 		r) reset_game ;;
 		[1-9]) player_move $input ;;
 	esac
 }
 
+ask_yes_no() {
+    local question=$1
+    local answer
+
+    while true; do
+        echo "$question (y/n)"
+        read -n 1 -s answer
+
+        case "$answer" in
+            y|Y) return 0 ;;
+            n|N) return 1 ;;
+        esac
+    done
+}
+
 ### GAME STATE RELATED
+save_game(){
+	saved=("${board[@]}")
+	for i in {0..8}; do
+		[ "${saved[$i]}" == " " ] && saved[$i]="1"
+	done
+	echo "${saved[@]}" > $SAVE_FILE
+	echo "$current_player" >> $SAVE_FILE
+}
+
+load_game(){
+	if [ -f $SAVE_FILE ]; then
+		read -a board < $SAVE_FILE
+		current_player=$(tail -n 1 $SAVE_FILE)
+
+		for i in {0..8}; do
+			[ "${board[$i]}" == "1" ] && board[$i]=" "
+		done
+	fi
+}
+
 reset_game(){
 	board=(" " " " " "
 			" " " " " "
@@ -90,6 +128,10 @@ switch_player(){
 
 
 # MAIN + GAME LOOP
+if ask_yes_no "load previous game?"; then
+    load_game
+fi
+
 while $is_playing; do
 	clear
 
