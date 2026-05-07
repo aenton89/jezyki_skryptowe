@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import "./App.css";
 import Header from "./components/Header";
 import Category from "./components/Category";
@@ -17,14 +18,8 @@ function App() {
     const [showCart, setShowCart] = useState(false);
 
     useEffect(() => {
-        // zwraca obiekt Response, więc trzeba go przekształcić na JSON
-        fetch("/api/products")
-            .then((res) => res.json())
-            .then((data) => setProducts(data));
-
-        fetch("/api/categories")
-            .then((res) => res.json())
-            .then((data) => setCategories(data));
+        axios.get("/api/products").then((res) => setProducts(res.data));
+        axios.get("/api/categories").then((res) => setCategories(res.data));
     }, []);
 
     function addToCart(product) {
