@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 
 // to wymagało zmiany, żeby ominąć problem z CORS na początku
-// // https://vite.dev/config/
+// https://vite.dev/config/
 // export default defineConfig({
 //   plugins: [react()],
 // })
