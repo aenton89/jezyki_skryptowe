@@ -27,7 +27,7 @@ function Cart({cart, removeFromCart, totalPrice, setShowCart}) {
                         </ul>
 
                         <h3>
-                            Sum: {totalPrice()} PLN
+                            Total: {totalPrice()} PLN
                         </h3>
                     </>
                 )}

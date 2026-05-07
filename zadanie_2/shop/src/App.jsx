@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Category from "./components/Category";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 
 
 
@@ -16,6 +17,7 @@ function App() {
     const [cart, setCart] = useState([]);
 
     const [showCart, setShowCart] = useState(false);
+    const [showCheckout, setShowCheckout] = useState(false);
 
     useEffect(() => {
         axios.get("/api/products").then((res) => setProducts(res.data));
@@ -36,14 +38,45 @@ function App() {
         return cart.reduce((sum, product) => sum + product.price, 0);
     }
 
+    function handleBackToStore() {
+        setShowCart(false);
+        setShowCheckout(false);
+    }
+
+    function handleOrderComplete() {
+        setCart([]);
+        setShowCheckout(false);
+        setShowCart(false);
+    }
+
+    if (showCheckout) {
+        return (
+            <Checkout
+                cart={cart}
+                totalPrice={totalPrice}
+                onBackToStore={handleBackToStore}
+                onOrderComplete={handleOrderComplete}
+            />
+        );
+    }
+
     if (showCart) {
         return (
-            <Cart
-                cart={cart}
-                removeFromCart={removeFromCart}
-                totalPrice={totalPrice}
-                setShowCart={setShowCart}
-            />
+            <div>
+                <Cart
+                    cart={cart}
+                    removeFromCart={removeFromCart}
+                    totalPrice={totalPrice}
+                    setShowCart={setShowCart}
+                />
+
+                {cart.length > 0 && (<div style={{ textAlign: "center", marginTop: "20px" }}>
+                        <button onClick={() => setShowCheckout(true)}>
+                            Go to payment
+                        </button>
+                    </div>
+                )}
+            </div>
         );
     }
 
