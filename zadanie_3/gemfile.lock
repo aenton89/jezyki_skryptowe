@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    fiddle (1.1.6)
+    nokogiri (1.19.3-x64-mingw-ucrt)
+      racc (~> 1.4)
+    racc (1.8.1)
+    uri (1.0.4)
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  fiddle
+  nokogiri
+  uri
+
+BUNDLED WITH
+   2.6.9
