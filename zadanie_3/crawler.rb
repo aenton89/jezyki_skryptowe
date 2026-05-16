@@ -8,7 +8,7 @@ require_relative 'product'
 
 
 class Crawler
-  URL = "https://www.amazon.pl/s?k=laptop+ideapad+3"
+  BASE_URL = "https://www.amazon.pl/s?k="
 
   def initialize
     @headers = {
@@ -16,8 +16,10 @@ class Crawler
     }
   end
 
-  def fetch_products
-    html = URI.open(URL, @headers).read
+  def fetch_products(keyword = "laptop ideapad 3")
+    url = BASE_URL + URI.encode_www_form_component(keyword)
+    puts "link: #{url} \n"
+    html = URI.open(url, @headers).read
 
     parse_products(html)
   end
