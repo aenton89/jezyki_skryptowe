@@ -5,7 +5,7 @@ require 'fileutils'
 
 
 class StorageTXT
-  DIR = "storage_txt"
+  DIR = "storage"
 
   # dzięki self to metoda statyczna
   def self.save_products(products, keyword)

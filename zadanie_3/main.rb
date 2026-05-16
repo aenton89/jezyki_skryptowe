@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 require_relative 'crawler'
-require_relative 'storage_txt'
+# require_relative 'storage_txt'
+require_relative 'storage_db'
 
 
 
@@ -12,7 +13,8 @@ def run_search
   crawler = Crawler.new
   products = crawler.fetch_products(keyword)
 
-  StorageTXT.save_products(products, keyword)
+  # StorageTXT.save_products(products, keyword)
+  StorageDB.save_products(products, keyword)
 
   if products.empty?
     puts "no products found"
