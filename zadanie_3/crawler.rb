@@ -62,8 +62,10 @@ class Crawler
       next if title_element.nil? || whole_price.nil?
 
       title = title_element.text.strip
+      # bo w txt było widać, że zapisuje z non-breaking space
+      whole = whole_price.text.strip.gsub(/\u00A0/, '')
       fraction = fraction_price ? fraction_price.text.strip : "00"
-      price = "#{whole_price.text.strip}#{fraction} PLN"
+      price = "#{whole}#{fraction} PLN"
 
       link_element = item.at_css('a.a-link-normal[href*="/dp/"]')
       url = link_element ? AMAZON_HOST + link_element['href'].split('?').first : nil

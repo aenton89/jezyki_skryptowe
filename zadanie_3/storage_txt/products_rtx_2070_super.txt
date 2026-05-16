@@ -1,0 +1,152 @@
+PRODUCT: Gigabyte Karta graficzna NVIDIA GeForce RTX 3050 WINDFORCE OC V2 6G - 6 GB GDDR6, 96-bitowa, PCI-E 4.0, 1477 MHz Core Clock, 2 x DP 1.4, 2 x HDMI 2.1, GV-N3050WF2OCV2-6GD
+PRICE: 819,00 PLN
+URL: https://www.amazon.pl/Gigabyte-graficzna-NVIDIA-GeForce-WINDFORCE/dp/B0DS54QPDR/ref=sr_1_3
+--------------------------------------------------
+PRODUCT: ASUS Dual -RTX3050-O6G NVIDIA GeForce RTX 3050 6 GB GDDR6
+PRICE: 854,42 PLN
+URL: https://www.amazon.pl/ASUS-RTX3050-O6G-NVIDIA-GeForce-GDDR6/dp/B086ZSQZZ7/ref=sr_1_5
+--------------------------------------------------
+PRODUCT: MSI, GeForce RTX 3050 VENTUS 2X E 6G OC
+PRICE: 889,00 PLN
+URL: https://www.amazon.pl/MSI-GeForce-RTX-3050-VENTUS/dp/B0BSN1QFXX/ref=sr_1_7
+--------------------------------------------------
+PRODUCT: ASUS DUAL RTX5060 OC, PCIe5, 8 GB DDR7, HDMI, 3 DP, zegar 2565 MHz, podkręcony, kompaktowy SFF-Ready
+PRICE: 1329,00 PLN
+URL: https://www.amazon.pl/ASUS-RTX5060-podkr%C4%99cony-kompaktowy-SFF-Ready/dp/B0F7HZ9QSZ/ref=sr_1_9
+--------------------------------------------------
+PRODUCT: ASUS VGA 8GB RTX5050 DUAL-O8G 3xDP/1xHDMI DUAL-RTX5050-O8G
+PRICE: 1089,00 PLN
+URL: https://www.amazon.pl/ASUS-RTX5050-DUAL-O8G-1xHDMI-DUAL-RTX5050-O8G/dp/B09CMF65V5/ref=sr_1_11
+--------------------------------------------------
+PRODUCT: Wentylator karty graficznej do ASUS Dual RTX 2070 EVO V2, RTX 1660 EVO, ASUS Dual GeForce RTX 2060 SUPER EVO V2, 87 mm, zestaw 2 szt
+PRICE: 123,73 PLN
+URL: https://www.amazon.pl/Wentylator-karty-graficznej-GeForce-zestaw/dp/B0F4PZ4CD6/ref=sr_1_12
+--------------------------------------------------
+PRODUCT: SISS Wentylator do karty graficznej Zotac GeForce RTX 1660ti RTX 2060 2070 Super karta wideo, wentylator do karty graficznej GA92A2H, wentylator graficzny, chłodzenie kart graficznych, 87 mm
+PRICE: 106,66 PLN
+URL: https://www.amazon.pl/SISS-Wentylator-graficznej-wentylator-graficznych/dp/B0BSR7M4T9/ref=sr_1_13
+--------------------------------------------------
+PRODUCT: ASUS VGA 8GB RTX5060 PRIME-O8G-GAMING 3xDP/1xHDMI PRIME-RTX5060-O8G
+PRICE: 1499,95 PLN
+URL: https://www.amazon.pl/ASUS-RTX5060-PRIME-O8G-GAMING-1xHDMI-PRIME-RTX5060-O8G/dp/B0CSFMYN1W/ref=sr_1_14
+--------------------------------------------------
+PRODUCT: Zapasowy wentylator do kart graficznych MSI RTX 2070 Super 2080 Ti Gaming X Trio (prawy 2 x 95 mm)
+PRICE: 128,00 PLN
+URL: https://www.amazon.pl/Zapasowy-wentylator-graficznych-Super-Gaming/dp/B0FTBWLY9T/ref=sr_1_15
+--------------------------------------------------
+PRODUCT: Wentylator do karty graficznej Zotac GeForce RTX 1660ti RTX 2060 2070 Super Mini karta wideo Cooling GA92A2H
+PRICE: 109,05 PLN
+URL: https://www.amazon.pl/Wentylator-graficznej-GeForce-2060-2070/dp/B097F1JJH5/ref=sr_1_16
+--------------------------------------------------
+PRODUCT: T129215SU wentylator do chłodzenia kart wideo ASUS ROG STRIX-GeForce RTX 2070 2080 Super Ti Gaming RTX2080 RTX2080Ti, części zamienne, chłodnica kart GPU
+PRICE: 149,34 PLN
+URL: https://www.amazon.pl/T129215SU-wentylator-chlodzenia-STRIX-GeForce-RTX2080Ti/dp/B0C5S2ZFKC/ref=sr_1_17
+--------------------------------------------------
+PRODUCT: SISS Wentylator karty graficznej T129215SU do ASUS RTX 2060 Super 2070 2080 2080 Super DUAL EVO Advanced karta graficzna wentylator, wentylator do karty graficznej, wentylator chłodzący
+PRICE: 119,46 PLN
+URL: https://www.amazon.pl/SISS-Wentylator-graficznej-T129215SU-wentylator/dp/B09RR269D5/ref=sr_1_18
+--------------------------------------------------
+PRODUCT: Zapasowy wentylator do kart graficznych MSI RTX 2070 Super 2080 Ti Gaming X Trio (lewy 87 mm)
+PRICE: 106,66 PLN
+URL: https://www.amazon.pl/Zapasowy-wentylator-graficznych-Super-Gaming/dp/B0FTBY7PVW/ref=sr_1_19
+--------------------------------------------------
+PRODUCT: ASUS Dual NVIDIA GeForce RTX 5070 OC Edition, karta graficzna 12 GB GDDR7, 192 bity, PCIe 5.0, 2 wentylatory Axial-Tech, 1 HDMI 2.1, 3 DisplayPort 2.1, GPU Tweak III, biały, DUAL-RTX5070-O12G
+PRICE: 2479,00 PLN
+URL: https://www.amazon.pl/ASUS-wentylatory-Axial-Tech-DisplayPort-DUAL-RTX5070-O12G/dp/B0F8KJKC9Y/ref=sr_1_20
+--------------------------------------------------
+PRODUCT: Wentylator karty graficznej T129215SU do ASUS ROG STRIX-GeForce RTX 2070 2080 Super Ti Gaming RTX2080 RTX2080Ti (wentylator B-6-pinowy)
+PRICE: 95,00 PLN
+URL: https://www.amazon.pl/Dotodo-Wentylator-graficznej-STRIX-GeForce-wentylator/dp/B09K3SYV8B/ref=sr_1_22
+--------------------------------------------------
+PRODUCT: Chłodnica GPU do ASUS ROG STRIX GeForce RTX 2070/2080 Super/Ti wentylator (Fan-ABC), 8,8 x 8,8 x 12 cm, 12 V, 0,5 A, otwory 32 mm, Desktop, 6 W, Kopolimer akrylonitrylo-butadieno-styrenowy
+PRICE: 177,81 PLN
+URL: https://www.amazon.pl/Dotodo-Chlodnica-wentylator-Kopolimer-akrylonitrylo-butadieno-styrenowy/dp/B09K3YKY17/ref=sr_1_23
+--------------------------------------------------
+PRODUCT: Wentylatory chłodzące karty GPU T129215SU do ASUS ROG STRIX-GeForce RTX 2070 2080 SUPER Ti GAMING RTX2080 RTX2080Ti wentylator (A-4PIN)
+PRICE: 95,00 PLN
+URL: https://www.amazon.pl/Dotodo-Wentylatory-chlodz%C4%85ce-STRIX-GeForce-wentylator/dp/B09K3VJLQJ/ref=sr_1_24
+--------------------------------------------------
+PRODUCT: MSI GeForce RTX 5060 8G VENTUS 2X OC BIAŁY
+PRICE: 1599,00 PLN
+URL: https://www.amazon.pl/MSI-GeForce-5060-VENTUS-BIA%C5%81Y/dp/B0972D2R41/ref=sr_1_25
+--------------------------------------------------
+PRODUCT: 87 mm GA92A2H 0,35A wentylator do karty graficznej chłodnica do Zotac GeForce GTX 1660 1660 Ti/RTX 2060 2070 Super Mini wentylator zastępczy chłodnicy (wentylator karty graficznej-AB)
+PRICE: 151,95 PLN
+URL: https://www.amazon.pl/Dotodo-wentylator-graficznej-chlodnica-graficznej-AB/dp/B0D2RK979V/ref=sr_1_26
+--------------------------------------------------
+PRODUCT: Gigabyte Karta graficzna Radeon RX 9070 XT GAMING OC 16G - 16 GB GDDR6, 256bit, PCI-E 5.0, 3060 MHz Core Clock, 2 x DisplayPort, 2 x HDMI, GV-R9070XTGAMING OC-16GD
+PRICE: 2851,42 PLN
+URL: https://www.amazon.pl/Gigabyte-Karta-graficzna-Radeon-GAMING/dp/B0DT7B79K9/ref=sr_1_27
+--------------------------------------------------
+PRODUCT: MSI Karta graficzna NVIDIA GeForce RTX 5070 12G Gaming Trio OC 192 Bit GDDR7, częstotliwość Boost do 2625 MHz, PCIe Gen 5, DLSS 4, DP 2.1 x 3, HDMI 2.1 x 1
+PRICE: 2902,68 PLN
+URL: https://www.amazon.pl/MSI-graficzna-NVIDIA-GeForce-cz%C4%99stotliwo%C5%9B%C4%87/dp/B0DX7GSX7B/ref=sr_1_28
+--------------------------------------------------
+PRODUCT: MSI GeForce RTX 5070 12G VENTUS 2X OC
+PRICE: 2599,00 PLN
+URL: https://www.amazon.pl/MSI-GeForce-RTX-5070-VENTUS/dp/B0DX7JJ87N/ref=sr_1_29
+--------------------------------------------------
+PRODUCT: Karta Graficzna RTX 2070, 8 GB GDDR6 256-bitowa Karta Graficzna do Gier Komputerowych z PCI Express 3.0, HDMI, 3xDP, 8PIN Podwójne Wentylatory Biała Komputerowa Karta Graficzna
+PRICE: 2098,57 PLN
+URL: https://www.amazon.pl/Graficzna-256-bitowa-Komputerowych-Wentylatory-Komputerowa/dp/B0BS6W8SQP/ref=sr_1_31
+--------------------------------------------------
+PRODUCT: yaoqijie 8. 7mm PLA09215S12H RTX2060 GTX 1660 Super 1660 Ti. Mini ITX OC. Kompatybilny z Gigabajt. Geforce RTX 2060 RTX 2070 Wentylator karty graficznej lasting
+PRICE: 124,26 PLN
+URL: https://www.amazon.pl/PLA09215S12H-Kompatybilny-Gigabajt-Wentylator-graficznej/dp/B09T8ZS96C/ref=sr_1_32
+--------------------------------------------------
+PRODUCT: Gigabyte Karta graficzna GeForce RTX 5070 GAMING OC 12G - 12 GB GDDR7, 192bit, PCI-E 5.0, XXXXMHz Core Clock, 3 x DP 2.1a, 1 x HDMI 2.1b, NVIDIA DLSS 4, GV-N5070GAMING OC-12GD
+PRICE: 2749,00 PLN
+URL: https://www.amazon.pl/Gigabyte-Karta-graficzna-GeForce-GAMING/dp/B0DTGNTQ3C/ref=sr_1_33
+--------------------------------------------------
+PRODUCT: 87MM GA92A2H graphics Wentylator chłodzący kompatybilny z Zotac GeForce RTX 2070 SUPER Mini 8GB ZT-T20710E-10M
+PRICE: 178,15 PLN
+URL: https://www.amazon.pl/graphics-Wentylator-chlodz%C4%85cy-kompatybilny-ZT-T20710E-10M/dp/B08GPDD8NF/ref=sr_1_34
+--------------------------------------------------
+PRODUCT: yaoqijie 8. 7mm PLA09215S12H RTX2060 GTX 1660 Super 1660 Ti. Mini ITX OC. Kompatybilny z Gigabajt. Geforce RTX 2060 RTX 2070 Wentylator karty graficznej lasting
+PRICE: 144,29 PLN
+URL: https://www.amazon.pl/PLA09215S12H-Kompatybilny-Gigabajt-Wentylator-graficznej/dp/B09T5V5P2Z/ref=sr_1_35
+--------------------------------------------------
+PRODUCT: 95MM PLD10010B12HH RTX 2070 ARMOR GPU Fan，Compatible with RTX 2070 Armor、RTX 2070 Super Armor OC Graphics Card Cooling Fan(1SET)
+PRICE: 154,83 PLN
+URL: https://www.amazon.pl/PLD10010B12HH-Fan%EF%BC%8CCompatible-Armor%E3%80%81RTX-Graphics-Cooling/dp/B0DNDSK9PF/ref=sr_1_37
+--------------------------------------------------
+PRODUCT: Compatible with RTX 2070 2080 SUPER Gaming Graphics Card Cooling Fan 82MM T128015SU PLA09215S12H GPU Cooler(Y)
+PRICE: 317,93 PLN
+URL: https://www.amazon.pl/Compatible-Graphics-Cooling-T128015SU-PLA09215S12H/dp/B0DP2MDJR3/ref=sr_1_38
+--------------------------------------------------
+PRODUCT: Zapasowy wentylator do kart graficznych, zestaw kompatybilny z ASUS ROG Strix GeForce RTX 2060 i 2070 Series Super, OC, Advanced
+PRICE: 136,53 PLN
+URL: https://www.amazon.pl/Zapasowy-wentylator-graficznych-kompatybilny-Advanced/dp/B0GVW4KP6T/ref=sr_1_39
+--------------------------------------------------
+PRODUCT: Wentylator chłodzący 87MM FDC10H12S9-C kompatybilny z RTX 2070 2080 SUPER Ti Gaming RTX2080 RTX2080Ti
+PRICE: 120,92 PLN
+URL: https://www.amazon.pl/Wentylator-chlodz%C4%85cy-FDC10H12S9-C-kompatybilny-RTX2080Ti/dp/B0GSD6CKQF/ref=sr_1_40
+--------------------------------------------------
+PRODUCT: 2 szt./zestaw 85 mm CF9015H12S, chłodnica GPU VGA do ZOTAC dla GeForce RTX 2070 Super Twin Fan 2080 Ti 11 GB
+PRICE: 142,16 PLN
+URL: https://www.amazon.pl/zestaw-CF9015H12S-chlodnica-ZOTAC-GeForce/dp/B0FR4L13RP/ref=sr_1_41
+--------------------------------------------------
+PRODUCT: VGA Asus GeForce® RTX 4070 Super 12GB ROG STRIX Gaming OC
+PRICE: 4603,90 PLN
+URL: https://www.amazon.pl/Asus-GeForce%C2%AE-Super-STRIX-Gaming/dp/B086ZSPSW7/ref=sr_1_43
+--------------------------------------------------
+PRODUCT: 95 mm PLD10010S12H GTX1660Ti GTX 1650 GPU wentylator do RTX2070 RTX 2060 SUPER 2070 wentylator karty graficznej z etui
+PRICE: 133,21 PLN
+URL: https://www.amazon.pl/QKFTCSDW-PLD10010S12H-GTX1660Ti-wentylator-graficznej/dp/B0FHWJBGGH/ref=sr_1_44
+--------------------------------------------------
+PRODUCT: Część chłodząca do komputera 87 mm, 100 mm, GA92S2H GAA8S2U 4PIN RTX2070, chłodnica GPU, kompatybilna z RTX 2070 SUPER 8G mini wentylator chłodzący do karty graficznej
+PRICE: 122,65 PLN
+URL: https://www.amazon.pl/chlodz%C4%85ca-komputera-kompatybilna-wentylator-graficznej/dp/B0GFGTSHPB/ref=sr_1_45
+--------------------------------------------------
+PRODUCT: MAHIE Nowy wentylator GPU 95MM PLD10010B12HH RTX 2070 ARMOR, kompatybilny z zbroją MSI GeForce RTX 2070, wentylator chłodzący karty graficznej RTX 2070 Super Armor OC Cheerfully (Color : 1SET)
+PRICE: 224,88 PLN
+URL: https://www.amazon.pl/MAHIE-wentylator-PLD10010B12HH-kompatybilny-graficznej/dp/B0C1Z6CDP2/ref=sr_1_46
+--------------------------------------------------
+PRODUCT: Wentylator karty graficznej GA91S2U 85 mm 4-pinowy GTX 1660 1660Ti RTX2060 GTX1660 do PNY Palit RTX 2060 SUPER 2070 chłodzenia Dual GPU Gamingpro(2PCS)
+PRICE: 123,48 PLN
+URL: https://www.amazon.pl/Wentylator-graficznej-4-pinowy-chlodzenia-Gamingpro/dp/B0FS18H1NW/ref=sr_1_47_mod_primary_new
+--------------------------------------------------
+PRODUCT: 95MM PLD10010S12HH GTX1660Ti GTX 1650 kompatybilny z Gigabyte RTX2070 RTX 2060 SUPER 2070 wiatrak karty OC Lucky
+PRICE: 174,38 PLN
+URL: https://www.amazon.pl/MSEURO-PLD10010S12HH-GTX1660Ti-kompatybilny-Gigabyte/dp/B0BN2WTV1S/ref=sr_1_48
+--------------------------------------------------
