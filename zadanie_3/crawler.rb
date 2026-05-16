@@ -9,6 +9,7 @@ require_relative 'product'
 
 class Crawler
   BASE_URL = "https://www.amazon.pl/s?k="
+  AMAZON_HOST = "https://www.amazon.pl"
 
   def initialize
     @headers = {
@@ -22,6 +23,26 @@ class Crawler
     html = URI.open(url, @headers).read
 
     parse_products(html)
+  end
+
+  def fetch_details(product)
+    return product if product.url.nil?
+
+    puts "\ndownloading details: #{product.url}"
+    puts "-" * 80
+    html = URI.open(product.url, @headers).read
+    doc = Nokogiri.HTML(html)
+
+    bullets = doc.css('#feature-bullets ul li span.a-list-item')
+                 .map { |el| el.text.strip }
+                 .reject { |t| t.empty? }
+    product.description = bullets.map { |b| "- #{b}" }.join("\n") unless bullets.empty?
+
+    product
+
+  rescue OpenURI::HTTPError, SocketError => e
+    puts "error downloading details: #{e.message}"
+    product
   end
 
   private
@@ -44,7 +65,10 @@ class Crawler
       fraction = fraction_price ? fraction_price.text.strip : "00"
       price = "#{whole_price.text.strip}#{fraction} PLN"
 
-      products << Product.new(title, price)
+      link_element = item.at_css('a.a-link-normal[href*="/dp/"]')
+      url = link_element ? AMAZON_HOST + link_element['href'].split('?').first : nil
+
+      products << Product.new(title, price, url)
     end
 
     products
