@@ -21,6 +21,10 @@ zrzuty ekranu/filmik: [link do mediów zadanie 2.](https://github.com/user-attac
 
 
 
+
+
+
+
 ## zadanie 3 - crawler w Ruby
 - 3.0 Należy pobrać podstawowe dane o produktach (tytuł, cena), dowolna kategoria [commit 1.](https://github.com/aenton89/jezyki_skryptowe/commit/8683a1907d9d30025b470b44219aaed789dc6688)
 - 3.5 Należy pobrać podstawowe dane o produktach wg słów kluczowych [commit 2.](https://github.com/aenton89/jezyki_skryptowe/commit/174c32f9b5732fb8e7dcd01d44a38513370bab2c)
@@ -30,3 +34,26 @@ zrzuty ekranu/filmik: [link do mediów zadanie 2.](https://github.com/user-attac
 
 kod: [link do zadania 3.](https://github.com/aenton89/jezyki_skryptowe/tree/main/zadanie_3)  
 zrzuty ekranu/filmik: [link do mediów zadanie 3.](https://github.com/user-attachments/assets/9b5a26c9-1a9d-4f99-8dca-25d00200e60b)  
+
+
+
+## zadanie 4 - Tetris w Lua
+- 3.0 Postawowa wersja dekstopowa z obsługą na klawiaturze - minimum 4 rodzaje klocków [commit 1.](https://github.com/aenton89/jezyki_skryptowe/commit/cf03bf1a613774d1fbba2ccba2371feee6c8e20c)
+- 3.5 Zapis i odczyt gier [commit 2.](https://github.com/aenton89/jezyki_skryptowe/commit/08f98405a706608bc09f18199ef6f26e3ddefb56)
+- 4.0 Dodanie efektów dźwiękowych przy akcjach [commit 3.](https://github.com/aenton89/jezyki_skryptowe/commit/6e277936fbc26841e6268b1c6821e54bf6dd7459)
+- 4.5 Dodanie animacji przy zbijaniu klocków [commit 4.](https://github.com/aenton89/jezyki_skryptowe/commit/8a2a7aad3ecf46a779042be17130ead64bbabdae)
+- 5.0 Wersja na iOS lub Android z implementacją touch zamiast klawiatury [BRAK]
+
+kod: [link do zadania 4.](https://github.com/aenton89/jezyki_skryptowe/tree/main/zadanie_4)  
+zrzuty ekranu/filmik: [link do mediów zadanie 4.](https://github.com/user-attachments/assets/932176c6-b4ee-44a3-acf8-ed8a7cfd7e95)  
+
+
+
+## Credits:
+### sound effects dla zadania 4.
+- Finger Snap Fail by qubodup - [freesound](https://freesound.org/s/743670/) - License: Creative Commons 0
+- Completed.wav by Kenneth_Cooney - [freesound](https://freesound.org/s/609336/) - License: Creative Commons 0
+- success2 by Kenneth_Cooney - [freesound](https://freesound.org/s/779817/) - License: Creative Commons 0
+- Retro Game sfx_jump bump.wav by mikala_oidua - [freesound](https://freesound.org/s/365672/) - License: Creative Commons 0
+- Retro video game sfx - Fail by OwlStorm - [freesound](https://freesound.org/s/404743/) - License: Creative Commons 0
+- UI Button Click by el_boss - [freesound](https://freesound.org/s/677861/) - License: Creative Commons 0  
