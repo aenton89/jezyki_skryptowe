@@ -1,6 +1,7 @@
 -- kod rysowania: plansza, klocki, cień, panel boczny
 local Pieces = require("pieces")
 local Board = require("board")
+local Save = require("save")
 
 local Draw = {}
 
@@ -16,7 +17,7 @@ local ROWS = Board.ROWS
 local PANEL_X = BOARD_X + COLS * CELL + 20
 
 -- wymiary okna
-Draw.WIN_W = PANEL_X + 115
+Draw.WIN_W = PANEL_X + 220
 Draw.WIN_H = BOARD_Y + ROWS * CELL + 20
 
 -- koloru UI
@@ -130,7 +131,7 @@ local function panel_box(x, y, w, h, title)
     setc(C.border)
     love.graphics.setLineWidth(1)
     love.graphics.rectangle("line", x, y, w, h, 3, 3)
-    
+
     if title then
         setc(C.label)
         love.graphics.printf(title, x, y - 18, w, "center")
@@ -141,6 +142,8 @@ end
 function Draw.draw(game)
     local board = game.board
     local current = game.current
+
+    local highscore = Save.load_highscore()
 
     -- background
     setc(C.bg)
@@ -232,7 +235,7 @@ function Draw.draw(game)
         )
     end
 
-    -- wynik, poziom, linie
+    -- wynik, poziom, linie, highscore
     local info_y = hold_y + box_h + gap + 10
     local iw = box_w
 
@@ -247,11 +250,18 @@ function Draw.draw(game)
     info_row("SCORE", game.score, info_y)
     info_row("LEVEL", game.level, info_y + 48)
     info_row("LINES", game.lines, info_y + 96)
+    info_row("BEST SCORE", highscore, info_y + 144)
 
     -- instrukcje sterowania
-    local ctrl_y = info_y + 155
+    local col2_px = PANEL_X + box_w + 16
+    local ctrl_y = BOARD_Y
     setc(C.label)
-    love.graphics.print("CONTROLS", px, ctrl_y)
+    love.graphics.print("CONTROLS", col2_px, ctrl_y)
+
+    love.graphics.setLineWidth(1)
+    setc(C.border)
+    love.graphics.line(col2_px, ctrl_y + 18, col2_px + 100, ctrl_y + 18)
+
     local ctrls = {
         {"move", "LEFT RIGHT / A D"},
         {"rotate cw", "UP / W / X"},
@@ -261,12 +271,14 @@ function Draw.draw(game)
         {"hold", "C / SHIFT"},
         {"pause", "P / ESC"},
         {"restart", "R"},
+        {"save", "1"},
+        {"load", "2"},
     }
     for i, row in ipairs(ctrls) do
         setc(C.value)
-        love.graphics.print(row[1], px, ctrl_y + 28*(i-1) + 14)
+        love.graphics.print(row[1], col2_px, ctrl_y + 38*(i-1) + 24)
         setc(C.label)
-        love.graphics.print(row[2], px, ctrl_y + 28*(i-1) + 26)
+        love.graphics.print(row[2], col2_px, ctrl_y + 38*(i-1) + 40)
     end
 
     -- komunikaty o pauzie i końcu gry

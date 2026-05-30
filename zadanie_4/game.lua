@@ -2,6 +2,7 @@
 local Pieces = require("pieces")
 local Board = require("board")
 local Input = require("input")
+local Save = require("save")
 
 local Game = {}
 Game.__index = Game
@@ -24,6 +25,11 @@ function Game.new()
     self.board = Board.new()
     self.input = Input.new()
     self:reset()
+
+    -- autowczyt zapisu przy starcie gry
+    -- if Save.exists() then
+    --     Save.load_state(self)
+    -- end
 
     return self
 end
@@ -75,6 +81,9 @@ function Game:reset()
     self.lock_timer = 0
     self.lock_delay = 0.5
     self.on_ground = false
+
+    -- usuwanie zapisu gry przy restarcie
+    -- Save.delete_save()
 end
 
 function Game:spawn()
@@ -143,6 +152,13 @@ function Game:land()
     self.fall_timer = 0
     self.on_ground = false
     self.lock_timer = 0
+
+    -- auto-zapis
+    -- Save.save_state(self)
+
+    if self.score > Save.load_highscore() then
+        Save.save_highscore(self.score)
+    end
 end
 
 -- ruch boczny (wielokrotny dla ARR)
@@ -278,6 +294,20 @@ function Game:keypressed(key)
     for _, k in ipairs(Input.keys_for("hold")) do
         if key == k then 
             self:do_hold()
+            return 
+        end
+    end
+
+    for _, k in ipairs(Input.keys_for("save")) do
+        if key == k then 
+            Save.save_state(self)
+            return 
+        end
+    end
+
+    for _, k in ipairs(Input.keys_for("load")) do
+        if key == k then 
+            Save.load_state(self)
             return 
         end
     end

@@ -18,6 +18,8 @@ local KEYS = {
     hold = {"c", "lshift"},
     pause = {"p", "escape"},
     restart = {"r"},
+    save = {"1"},
+    load = {"2"},
 }
 
 
