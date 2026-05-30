@@ -160,10 +160,21 @@ function Draw.draw(game)
     end
 
     -- zawartość planszy
+    local anim_frac = game.anim_timer > 0 and (1 - game.anim_timer / 0.6) or nil
+    local clearing_set = {}
+    for _, r in ipairs(game.clearing_rows or {}) do
+        clearing_set[r] = true
+    end
+
     for r = 1, ROWS do
         for c = 1, COLS do
             if board.grid[r][c] then
-                draw_board_cell(c, r, board.grid[r][c])
+                if clearing_set[r] and anim_frac then
+                    local white = anim_frac
+                    draw_board_cell(c, r, {255*white, 255*white, 255})
+                else
+                    draw_board_cell(c, r, board.grid[r][c])
+                end
             end
         end
     end

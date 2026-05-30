@@ -21,6 +21,8 @@ local SPEEDS = {
 -- klocek opada tyle razy szybciej przy przytrzymaniu soft-drop'a
 local SOFT_DROP_FACTOR = 20
 
+
+
 function Game.new()
     local self = setmetatable({}, Game)
     self.board = Board.new()
@@ -87,6 +89,10 @@ function Game:reset()
 
     -- usuwanie zapisu gry przy restarcie
     -- Save.delete_save()
+
+    -- animacja
+    self.anim_timer = 0
+    self.clearing_rows = {}
 end
 
 function Game:spawn()
@@ -142,17 +148,34 @@ function Game:hard_drop()
     self.score = self.score + 2 * (gy - self.current.y)
     self.current.y = gy
     Audio.harddrop()
-    self:land()
+    self:land(true)
 end
 
-function Game:land()
+function Game:land(from_harddrop)
     self.board:lock(self.current)
-    local cleared = self.board:clear_lines()
-    if cleared > 0 then
-        Audio.clear(cleared)
-        self.score = self.score + LINE_POINTS[cleared] * self.level
-        self.lines = self.lines + cleared
-        self.level = math.floor(self.lines / 10) + 1
+
+    local full = {}
+    for r = 1, Board.ROWS do
+        local filled = true
+        for c = 1, Board.COLS do
+            if not self.board.grid[r][c] then
+                filled = false;
+                break
+            end
+        end
+        if filled then 
+            full[#full+1] = r
+        end
+    end
+
+    if #full > 0 then
+        self.clearing_rows = full
+        self.anim_timer = 0.6
+        Audio.clear(#full)
+    else
+        if not from_harddrop then
+            Audio.lock()
+        end
     end
 
     self.current = self:spawn()
@@ -189,6 +212,20 @@ end
 function Game:update(dt)
     if self.game_over or self.paused then 
         return 
+    end
+
+    -- animacja
+    if self.anim_timer > 0 then
+        self.anim_timer = self.anim_timer - dt
+        if self.anim_timer <= 0 then
+            local cleared = #self.clearing_rows
+            self.board:clear_lines()
+            self.score = self.score + LINE_POINTS[cleared] * self.level
+            self.lines = self.lines + cleared
+            self.level = math.floor(self.lines / 10) + 1
+            self.clearing_rows = {}
+        end
+        return
     end
 
     -- pobierz akcje z inputu
@@ -260,8 +297,7 @@ function Game:update(dt)
     if self.on_ground then
         self.lock_timer = self.lock_timer + dt
         if self.lock_timer >= self.lock_delay then
-            self:land()
-            Audio.lock()
+            self:land(false)
         end
     else
         self.lock_timer = 0
