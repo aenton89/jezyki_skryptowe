@@ -3,6 +3,7 @@ local Pieces = require("pieces")
 local Board = require("board")
 local Input = require("input")
 local Save = require("save")
+local Audio = require("audio")
 
 local Game = {}
 Game.__index = Game
@@ -30,6 +31,8 @@ function Game.new()
     -- if Save.exists() then
     --     Save.load_state(self)
     -- end
+
+    Audio.load()
 
     return self
 end
@@ -92,6 +95,7 @@ function Game:spawn()
     local p = Pieces.new(t)
     if self.board:collides(p, 0, 0) then
         self.game_over = true
+        Audio.gameover()
     end
 
     return p
@@ -107,6 +111,7 @@ function Game:do_hold()
         return 
     end
     self.hold_used = true
+    Audio.hold()
 
     -- pierwszy hold: odłóż bieżący, pobierz nowy
     if self.hold_piece == nil then
@@ -123,6 +128,7 @@ function Game:do_hold()
         self.current.y = 0
         if self.board:collides(self.current, 0, 0) then
             self.game_over = true
+            Audio.gameover()
         end
     end
 
@@ -135,6 +141,7 @@ function Game:hard_drop()
     local gy = self.board:ghost_y(self.current)
     self.score = self.score + 2 * (gy - self.current.y)
     self.current.y = gy
+    Audio.harddrop()
     self:land()
 end
 
@@ -142,6 +149,7 @@ function Game:land()
     self.board:lock(self.current)
     local cleared = self.board:clear_lines()
     if cleared > 0 then
+        Audio.clear(cleared)
         self.score = self.score + LINE_POINTS[cleared] * self.level
         self.lines = self.lines + cleared
         self.level = math.floor(self.lines / 10) + 1
@@ -197,6 +205,7 @@ function Game:update(dt)
     if acts.rot_cw then
         for _ = 1, acts.rot_cw do
             if self.board:try_rotate(self.current, 1) then
+                -- Audio.rotate()
                 if self.on_ground then 
                     self.lock_timer = 0 
                 end
@@ -207,6 +216,7 @@ function Game:update(dt)
     if acts.rot_ccw then
         for _ = 1, acts.rot_ccw do
             if self.board:try_rotate(self.current, -1) then
+                -- Audio.rotate()
                 if self.on_ground then 
                     self.lock_timer = 0 
                 end
@@ -251,6 +261,7 @@ function Game:update(dt)
         self.lock_timer = self.lock_timer + dt
         if self.lock_timer >= self.lock_delay then
             self:land()
+            Audio.lock()
         end
     else
         self.lock_timer = 0
