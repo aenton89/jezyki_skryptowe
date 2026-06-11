@@ -1,0 +1,39 @@
+{
+  "nazwa restauracji": "Twin R Diner",
+  "godziny otwarcia": {
+    "Poniedziałek - Piątek": "10:00 - 22:00",
+    "Sobota": "11:00 - 23:00",
+    "Niedziela": "12:00 - 21:00"
+  },
+  "menu": {
+    "zupy": {
+      "pomidorowa": 12,
+      "rosół": 10
+    },
+    "dania główne": {
+      "schabowy z ziemniakami i surówką": 30,
+      "burger": 34
+    },
+    "desery": {
+      "naleśniki z dżemem": 12,
+      "szarlotka": 8,
+      "ciasto wiśniowe": 8
+    },
+    "napoje": {
+      "kawa": {
+        "americano": 5,
+        "cappuccino": 6,
+        "mocha": 7,
+        "cold brew": 7
+      },
+      "herbata": {
+        "czarna": 6,
+        "mięta": 4
+      },
+      "soki": {
+        "pomarańczowy": 7,
+        "porzeczkowy": 7
+      }
+    }
+  }
+}
