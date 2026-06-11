@@ -1,38 +1,99 @@
 {
-  "nazwa restauracji": "Twin R Diner",
-  "godziny otwarcia": {
-    "Poniedziałek - Piątek": "10:00 - 22:00",
-    "Sobota": "11:00 - 23:00",
-    "Niedziela": "12:00 - 21:00"
+  "name": "Twin R Diner",
+  "description": "a diner serving lunches, pastries and coffee",
+  "hours": {
+    "Monday - Friday": "10:00 - 22:00",
+    "Saturday": "11:00 - 23:00",
+    "Sunday": "12:00 - 21:00"
   },
   "menu": {
-    "zupy": {
-      "pomidorowa": 12,
-      "rosół": 10
-    },
-    "dania główne": {
-      "schabowy z ziemniakami i surówką": 30,
-      "burger": 34
-    },
-    "desery": {
-      "naleśniki z dżemem": 12,
-      "szarlotka": 8,
-      "ciasto wiśniowe": 8
-    },
-    "napoje": {
-      "kawa": {
-        "americano": 5,
-        "cappuccino": 6,
-        "mocha": 7,
-        "cold brew": 7
+    "soups": {
+      "tomato soup": {
+        "price": 12,
+        "ingredients": ["tomatoes", "noodles", "onion", "celery", "basil"],
+        "allergens": ["gluten", "celery"]
       },
-      "herbata": {
-        "czarna": 6,
-        "mięta": 4
+      "chicken noodle soup": {
+        "price": 10,
+        "ingredients": ["chicken", "carrot", "parsley", "noodles", "lovage"],
+        "allergens": ["gluten"]
+      }
+    },
+    "main courses": {
+      "breaded pork cutlet with potatoes and slaw": {
+        "price": 30,
+        "ingredients": ["pork", "potatoes", "cabbage", "breadcrumbs", "egg", "butter"],
+        "allergens": ["gluten", "eggs", "milk"]
       },
-      "soki": {
-        "pomarańczowy": 7,
-        "porzeczkowy": 7
+      "burger": {
+        "price": 34,
+        "ingredients": ["beef", "sesame bun", "lettuce", "tomato", "onion", "mayo sauce"],
+        "allergens": ["gluten", "eggs", "sesame"]
+      }
+    },
+    "desserts": {
+      "pancakes with jam": {
+        "price": 12,
+        "ingredients": ["wheat flour", "eggs", "milk", "strawberry jam", "butter"],
+        "allergens": ["gluten", "eggs", "milk"]
+      },
+      "apple pie": {
+        "price": 8,
+        "ingredients": ["wheat flour", "apples", "cinnamon", "sugar", "eggs", "butter"],
+        "allergens": ["gluten", "eggs", "milk"]
+      },
+      "cherry cake": {
+        "price": 8,
+        "ingredients": ["wheat flour", "cherries", "cream", "eggs", "sugar"],
+        "allergens": ["gluten", "eggs", "milk"]
+      }
+    },
+    "drinks": {
+      "coffee": {
+        "americano": {
+          "price": 5,
+          "ingredients": ["coffee", "water"],
+          "allergens": []
+        },
+        "cappuccino": {
+          "price": 6,
+          "ingredients": ["coffee", "steamed milk"],
+          "allergens": ["milk"]
+        },
+        "mocha": {
+          "price": 7,
+          "ingredients": ["coffee", "milk", "chocolate syrup"],
+          "allergens": ["milk"]
+        },
+        "cold brew": {
+          "price": 7,
+          "ingredients": ["cold-brewed coffee"],
+          "allergens": []
+        }
+      },
+      "tea": {
+        "black": {
+          "price": 6,
+          "ingredients": ["black tea"],
+          "allergens": []
+        },
+        "mint": {
+          "price": 4,
+          "ingredients": ["mint"],
+          "allergens": []
+        }
+      },
+      "juices": {
+        "orange": {
+          "price": 7,
+          "ingredients": ["100% orange juice"],
+          "allergens": []
+        },
+        "blackcurrant": {
+          "price": 7,
+          "ingredients": ["100% blackcurrant juice"],
+          "allergens": []
+        }
       }
     }
   }
