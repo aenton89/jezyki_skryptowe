@@ -21,10 +21,6 @@ zrzuty ekranu/filmik: [link do mediów zadanie 2.](https://github.com/user-attac
 
 
 
-
-
-
-
 ## zadanie 3 - crawler w Ruby
 - 3.0 Należy pobrać podstawowe dane o produktach (tytuł, cena), dowolna kategoria [commit 1.](https://github.com/aenton89/jezyki_skryptowe/commit/8683a1907d9d30025b470b44219aaed789dc6688)
 - 3.5 Należy pobrać podstawowe dane o produktach wg słów kluczowych [commit 2.](https://github.com/aenton89/jezyki_skryptowe/commit/174c32f9b5732fb8e7dcd01d44a38513370bab2c)
@@ -46,6 +42,18 @@ zrzuty ekranu/filmik: [link do mediów zadanie 3.](https://github.com/user-attac
 
 kod: [link do zadania 4.](https://github.com/aenton89/jezyki_skryptowe/tree/main/zadanie_4)  
 zrzuty ekranu/filmik: [link do mediów zadanie 4.](https://github.com/user-attachments/assets/932176c6-b4ee-44a3-acf8-ed8a7cfd7e95)  
+
+
+
+## zadanie 5 - Python LLM
+- 3.0 Czatbot z wytrenowaną umiejętnością (poprzez prompt) obsługi co najmniej 3 sposobów sformułowania intencji (powitanie, menu, zamówienie) [commit 1.](https://github.com/aenton89/jezyki_skryptowe/commit/5cdc8f31b303b3d5220a3e503b5de9ab41e11d1d)
+- 3.5 Informacje o godzinach otwarcia i pozycjach w menu powinny być pobierane z pliku konfiguracyjnego (JSON/YAML) i przekazywane do modelu [commit 2.](https://github.com/aenton89/jezyki_skryptowe/commit/7ceb908bdb3fb5797175d310ca31019a3e19f00a)
+- 4.0 Czatbot musi przetworzyć zamówienie i potwierdzić zakupione posiłki, a także obsłużyć dodatkowe prośby (np. alergie, modyfikacje dań). Dane o alergiach, składzie, daniach ładowane z API aplikacji webowej napisanej we Flasku [commit 3.](https://github.com/aenton89/jezyki_skryptowe/commit/b88a34156e1591eb8bc010715cfe3867cc386e4f)
+- 4.5 Czatbot musi potwierdzić, kiedy posiłek będzie dostępny do odbioru w restauracji (estymacja czasu na podstawie zamówienia) [commit 4.](https://github.com/aenton89/jezyki_skryptowe/commit/56c65e63de30b894d459b876913a5ac61f1668ec)
+- 5.0 Czatbot powinien zapytać o adres dostawy i potwierdzić go, zamiast opcji odbioru osobistego, weryfikując kompletność danych adresowych. Zapisać zamówienie przez wywołanie API aplikacji we Flasku. We Flasku zapisujemy dane zamówienia w bazie [BRAK]
+
+kod: [link do zadania 5.](https://github.com/aenton89/jezyki_skryptowe/tree/main/zadanie_5)  
+zrzuty ekranu/filmik: [link do mediów zadanie 5.](https://github.com/user-attachments/assets/af54ec27-c6f7-435f-b4e2-780f4047ee62)  
 
 
 
