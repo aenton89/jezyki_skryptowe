@@ -78,45 +78,70 @@ TOOLS = [
             },
         },
     },
+    {
+        "type": "function",
+        "function": {
+            "name": "estimate_pickup_time",
+            "description": (
+                "Estimates how long the order will take and when it will be ready for "
+                "pickup. Call this AFTER the customer confirms what they want. Pass the "
+                "base dish names (e.g. 'tomato soup', not 'tomato soup without celery')."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "dishes": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "ordered dish names, e.g. ['burger', 'tomato soup']",
+                    }
+                },
+                "required": ["dishes"],
+            },
+        },
+    },
 ]
 
 
 
-# helper HTTP GET do Flask API
-def _fetch(path: str) -> dict | list:
+# helper HTTP do Flask API
+def _request(method: str, path: str, payload: dict | None = None) -> dict | list:
     try:
-        r = requests.get(f"{RESTAURANT_API_URL}{path}", timeout=5)
+        r = requests.request(method, f"{RESTAURANT_API_URL}{path}", json=payload, timeout=5)
     except requests.exceptions.ConnectionError:
         return {"ERR": "can't connect to restaurant server (is Flask running?)"}
     except Exception as e:
         return {"ERR": str(e)}
-    
-    if r.status_code == 404:
+
+    if r.status_code in (400, 404):
         try:
             return r.json()
         except ValueError:
-            return {"ERR": f"not found: {path}"}
-    
+            return {"not_found": path}
+
     try:
         r.raise_for_status()
     except requests.exceptions.HTTPError as e:
         return {"ERR": f"API returned error: {e.response.status_code}"}
-    
+
     return r.json()
 
 def execute_tool(name: str, args: dict) -> str:
     if name == "get_restaurant_info":
-        result = _fetch("/info")
+        result = _request("GET", "/info")
     elif name == "get_hours":
-        result = _fetch("/hours")
+        result = _request("GET", "/hours")
     elif name == "get_menu":
-        result = _fetch("/menu")
+        result = _request("GET", "/menu")
     elif name == "get_menu_category":
-        kategoria = args.get("kategoria", "")
-        result = _fetch(f"/menu/{requests.utils.quote(kategoria)}")
+        category = args.get("category", "")
+        result = _request("GET", f"/menu/{requests.utils.quote(category)}")
     elif name == "get_dish_details":
-        nazwa = args.get("nazwa", "")
-        result = _fetch(f"/menu/danie/{requests.utils.quote(nazwa)}")
+        name = args.get("name", "")
+        result = _request("GET", f"/menu/dish/{requests.utils.quote(name)}")
+    elif name == "estimate_pickup_time":
+        dishes = args.get("dishes", [])
+        result = _request("POST", "/order/estimate", {"dishes": dishes})
     else:
         result = {"ERR": f"unknown tool: {name}"}
  

@@ -7,13 +7,16 @@ endpointy:
   GET /menu/<category> - jedna kategoria (zupy, dania główne, desery, napoje)
   GET /menu/dish/<name> - jedno konkretne danie (wyszukiwanie po nazwie)
 """
-from flask import Flask, jsonify, abort
+from flask import Flask, jsonify, abort, request
 from pathlib import Path
 import json
+from datetime import datetime, timedelta
 
 
 
 CONFIG_FILE = "config.json"
+QUEUE_BUFFER_MIN = 5
+PER_EXTRA_ITEM_MIN = 3
 
 app = Flask(__name__)
 
@@ -99,6 +102,50 @@ def get_dish(name: str):
 
     abort(404, description=f"dish '{name}' not found")
 
+@app.route("/order/estimate", methods=["POST"])
+def estimate_order():
+    config = load_config()
+    flat = _flatten_menu(config.get("menu", {}))
+
+    prep = config.get("prep minutes", {})
+    if not prep:
+        abort(500, description="prep minutes is not configured in config.json")
+
+    payload = request.get_json(silent=True) or {}
+    names = payload.get("dishes", [])
+    if not isinstance(names, list) or not names:
+        abort(400, description="provide a non-empty 'dishes' list")
+
+    items, not_found, times = [], [], []
+    for raw in names:
+        dish = flat.get(str(raw).lower())
+        if not dish:
+            matches = [v for k, v in flat.items() if str(raw).lower() in k]
+            dish = matches[0] if len(matches) == 1 else None
+        if not dish:
+            not_found.append(raw)
+            continue
+        
+        top_category = dish["category"].split(" / ")[0]
+        minutes = prep.get(top_category)
+        if minutes is None:
+            abort(500, description=f"no prep time configured for category '{top_category}'")
+        
+        items.append({"name": dish["name"], "category": top_category, "prep minutes": minutes})
+        times.append(minutes)
+
+    if not times:
+        return jsonify({"items": [], "not_found": not_found, "info": "none of the dishes were found"}), 404
+
+    estimate = max(times) + PER_EXTRA_ITEM_MIN * (len(times) - 1) + QUEUE_BUFFER_MIN
+
+    return jsonify({
+        "items": items,
+        "estimated_minutes": estimate,
+        "message": f"Your order will be ready in about {estimate} minutes.",
+        "not_found": not_found,
+    })
+
 
 
 # obsługa błędów
@@ -110,6 +157,10 @@ def not_found(e):
 @app.errorhandler(500)
 def server_error(e):
     return jsonify({"error": str(e)}), 500
+
+@app.errorhandler(400)
+def bad_request(e):
+    return jsonify({"error": str(e)}), 400
 
 
 

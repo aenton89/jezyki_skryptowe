@@ -6,6 +6,12 @@
     "Saturday": "11:00 - 23:00",
     "Sunday": "12:00 - 21:00"
   },
+  "prep minutes": {
+    "soups": 15,
+    "main courses": 25,
+    "desserts": 10,
+    "drinks": 3
+  },
   "menu": {
     "soups": {
       "tomato soup": {
